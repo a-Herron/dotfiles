@@ -1,10 +1,17 @@
-all plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'alx741/vim-hindent'
+
 call plug#end()
+
+let g:hindent_on_save = 1
+let g:hindent_indent_size = 2
+let g:hindent_line_length = 80
+let g:hindent_command = "stack exec -- hindent"
 
 set background=dark
 colorscheme palenight
@@ -23,8 +30,12 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+syntax on
+filetype plugin indent on
+
 let g:ale_linters = {
 \   'javascript': ['standard'],
+\   'haskell': ['hlint']
 \}
 
 let g:ale_fixers = {
