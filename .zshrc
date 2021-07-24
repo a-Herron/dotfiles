@@ -1,20 +1,23 @@
-source $HOME/antigen.zsh
+export PATH=$HOME/bin:$HOME/.dotnet/tools:/usr/local/bin:$HOME/.local/bin:$HOME/.dotnet:$HOME/.stack/global-project/:$PATH
 
-antigen use oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
-antigen bundle git
-antigen bundle command-not-found
-antigen theme jenssegers/palenight.zsh-theme palenight
-export NVM_DIR="$HOME/.custom-nvm-dir"
-antigen bundle lukechilds/zsh-nvm
+ZSH_THEME="avit"
 
-antigen apply
+plugins=(git fzf)
 
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+source $ZSH/oh-my-zsh.sh
 
-export PATH=/home/$USER/.local/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 set -o vi
+
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+source /usr/share/doc/fzf/examples/completion.zsh
+
+if type rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden'
+fi
