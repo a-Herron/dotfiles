@@ -19,6 +19,9 @@ hi Pmenu ctermbg=black ctermfg=white
 
 nnoremap <silent> <C-p> :GFiles<CR>
 
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-w>k <C-\><C-n><C-w>k
+
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
