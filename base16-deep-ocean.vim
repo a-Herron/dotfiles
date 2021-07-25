@@ -36,12 +36,12 @@ let s:gui0A        = "C792EA"
 let g:base16_gui0A = "C792EA"
 let s:gui0B        = "C3E88D"
 let g:base16_gui0B = "C3E88D"
-let s:gui0C        = "89DDFF"
-let g:base16_gui0C = "89DDFF"
-let s:gui0D        = "82AAFF"
-let g:base16_gui0D = "82AAFF"
-let s:gui0E        = "C792EA"
-let g:base16_gui0E = "C792EA"
+let s:gui0C        = "464B5D"
+let g:base16_gui0C = "464B5D"
+let s:gui0D        = "F78C6C"
+let g:base16_gui0D = "F78C6C"
+let s:gui0E        = "F78C6C"
+let g:base16_gui0E = "F78C6C"
 let s:gui0F        = "F07178"
 let g:base16_gui0F = "F07178"
 
@@ -110,7 +110,7 @@ if has("nvim")
   let g:terminal_color_11 = "#C3E88D"
   let g:terminal_color_12 = "#89DDFF"
   let g:terminal_color_13 = "#82AAFF"
-  let g:terminal_color_14 = "#C792EA"
+  let g:terminal_color_14 = "#F78C6C"
   let g:terminal_color_15 = "#F07178"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_5
@@ -130,7 +130,7 @@ elseif has("terminal")
         \"#C3E88D",
         \"#89DDFF",
         \"#82AAFF",
-        \"#C792EA",
+        \"#F78C6C",
         \"#F07178",
         \ ]
 endif
