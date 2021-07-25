@@ -5,6 +5,8 @@ Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'https://github.com/neovimhaskell/haskell-vim.git'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -15,12 +17,31 @@ set expandtab
 set rnu
 set nu
 
+set laststatus=0 ruler
+
+let base16colorspace=256
+set termguicolors
+colorscheme base16-deep-ocean
+
+syntax on
+filetype plugin indent on
+
+let g:haskell_classic_highlighting=1
+let g:haskell_enable_quantification=1
+
+
 hi Pmenu ctermbg=black ctermfg=white
+hi VertSplit guibg=bg guifg=bg
+hi StatusLine guibg=bg guifg=bg
+
+
+"let g:tokyonight_style="night"
+"colorscheme tokyonight
 
 nnoremap <silent> <C-p> :GFiles<CR>
 
 tnoremap <Esc> <C-\><C-n>
-tnoremap <C-w>k <C-\><C-n><C-w>k
+tnoremap <C-w>k <C-\><C-n><C-w><C-k>
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
