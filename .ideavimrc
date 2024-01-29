@@ -1,0 +1,16 @@
+let mapleader=" "
+
+set nu rnu
+set incsearch
+
+nmap <leader>se <Action>(SearchEverywhere)
+nmap <leader>fu <Action>(FindUsages)
+nmap <leader>fuf <Action>(FindUsagesInFile)
+nmap <leader>gf <Action>(GotoFile)
+nmap <leader>gc <Action>(GotoClass)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <C-b> <Action>(Back)
+nmap <C-f> <Action>(Forward)
+nmap <leader>qa <Action>(QuickActions)
+nmap <leader>at <Action>(ActivateTerminalToolWindow)
