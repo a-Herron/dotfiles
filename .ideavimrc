@@ -1,25 +1,15 @@
 let mapleader=" "
 
-set nu rnu
-set incsearch
+set relativenumber
+set number
 
-nmap <leader>se <Action>(SearchEverywhere)
-nmap <leader>fu <Action>(FindUsages)
-nmap <leader>fuf <Action>(FindUsagesInFile)
-nmap <leader>gf <Action>(GotoFile)
-nmap <leader>gc <Action>(GotoClass)
-nmap <leader>gi <Action>(GotoImplementation)
-nmap <leader>gd <Action>(GotoDeclaration)
-nmap <C-b> <Action>(Back)
-nmap <C-f> <Action>(Forward)
-nmap <leader>qa <Action>(QuickActions)
-nmap <leader>at <Action>(ActivateTerminalToolWindow)
-nmap <leader>fi <Action>(ShowIntentionActions)
-nmap <leader>cot <Action>(CloseAllEditorsButActive)
-nmap <leader>cat <Action>(CloseAllEditors)
-nmap <leader>rf <Action>(RecentFiles)
-nmap <leader>cc <Action>(CodeCompletion)
-nmap <leader>de <Action>(Debug)
-nmap <leader>st <Action>(Stop)
-nmap <leader>gne <Action>(GotoNextError)
-nmap <leader>gpe <Action>(GotoPreviousError)
+nmap <leader>sf <Action>(GotoFile)
+nmap <leader>sg <Action>(TextSearchAction)
+nmap gr <Action>(FindUsages)
+nmap [r <Action>(NextOccurence)
+nmap ]r <Action>(PreviousOccurence)
+nmap [d <Action>(ReSharperGotoPrevErrorInSolution)
+nmap ]d <Action>(ReSharperGotoNextErrorInSolution)
+
+
+nnoremap <leader>sd <Action>(Rider.ProblemsView.ErrorsInSolution)
