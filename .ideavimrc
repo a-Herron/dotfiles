@@ -1,15 +1,44 @@
 let mapleader=" "
 
+set scrolloff=10
 set relativenumber
 set number
+set showmode
 
 nmap <leader>sf <Action>(GotoFile)
 nmap <leader>sg <Action>(TextSearchAction)
+
 nmap gr <Action>(FindUsages)
+nmap gi <Action>(GotoImplementation)
+nmap gd <Action>(GotoDeclaration)
+
+nmap <leader>ca <Action>(ShowIntentionActions)
+
 nmap [r <Action>(NextOccurence)
 nmap ]r <Action>(PreviousOccurence)
 nmap [d <Action>(ReSharperGotoPrevErrorInSolution)
 nmap ]d <Action>(ReSharperGotoNextErrorInSolution)
+nmap [b :bprev<Cr>
+nmap ]b :bnext<Cr>
+
+nmap <leader>h :action ShowHarpoon<Cr>
+
+nmap <leader>a :action AddToHarpoon<Cr>
+
+nmap <M-s> :action GotoHarpoon1<Cr>
+nmap <M-n> :action GotoHarpoon2<Cr>
+nmap <M-t> :action GotoHarpoon3<Cr>
+nmap <M-e> :action GotoHarpoon4<Cr>
+nmap <M-a> :action GotoHarpoon5<Cr>
+nmap <M-i> :action GotoHarpoon6<Cr>
+
+nmap <leader>rn <Action>(RenameElement)
+
+nmap <leader><leader> <Action>(CodeCompletion)
+
+nmap <leader>e <Action>(ShowErrorDescription)
+
+nmap <leader>t <Action>(ActivateTerminalToolWindow)
 
 
 nnoremap <leader>sd <Action>(Rider.ProblemsView.ErrorsInSolution)
