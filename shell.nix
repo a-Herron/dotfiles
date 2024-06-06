@@ -10,5 +10,6 @@ pkgs.mkShellNoCC {
     ripgrep
     sticky
     fira-code-nerdfont
+    git
   ];
 }
